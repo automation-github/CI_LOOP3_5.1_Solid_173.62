@@ -8,12 +8,12 @@ pipeline {
     }
     stage('fragment_cache') {
       steps {
-        build ('Fragment_cache',propagate: false, wait: false)
+        build job:('Fragment_cache',propagate: false, wait: false)
       }
     }
     stage('Thumbnails') {
       steps {
-        build ('Thumbnails',propagate: false, wait: false)
+        build job:('Thumbnails',propagate: false, wait: false)
       }
     }
     stage('at_lru') {
