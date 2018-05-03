@@ -13,4 +13,7 @@ pipeline {
     }       
   
   }
+ environment {
+   target_cluster = '10.65.173.162'
+  }
 }
