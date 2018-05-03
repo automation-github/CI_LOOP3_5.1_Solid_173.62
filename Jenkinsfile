@@ -8,22 +8,22 @@ pipeline {
     }
     stage('fragment_cache') {
       steps {
-        build 'Fragment_cache',propagate: false       
+        build (job:'Fragment_cache',propagate: false)
       }
     }
     stage('thumbnails_rb') {
       steps {
-        build 'test_thumbnails_rb_5.1',propagate: false
+        build (job:'test_thumbnails_rb_5.1',propagate: false)
       }
     }
     stage('thumbnails_vod') {
       steps {
-        build 'test_thumbnails_vod_5.1',propagate: false
+        build (job:'test_thumbnails_vod_5.1',propagate: false)
       }
     }
     stage('at_lru') {
       steps {
-        build 'test_at_lru_cache_5.1',propagate: false
+        build (job:'test_at_lru_cache_5.1',propagate: false)
       }
     }
     stage('copy xmls') {
